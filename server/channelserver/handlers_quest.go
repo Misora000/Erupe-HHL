@@ -85,6 +85,10 @@ func BackportQuest(data []byte) []byte {
 			}
 		}
 	}
+
+	if _config.ErupeConfig.RealClientMode <= _config.S6 {
+		binary.LittleEndian.PutUint32(data[16:20], binary.LittleEndian.Uint32(data[8:12]))
+	}
 	return data
 }
 
