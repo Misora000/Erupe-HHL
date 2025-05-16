@@ -28,7 +28,7 @@ If you want to modify or compile Erupe yourself, please read on.
 ## Installation
 
 1. Bring up a fresh database by using the [backup file attached with the latest release](https://github.com/ZeruLight/Erupe/releases/latest/download/SCHEMA.sql).
-2. Run each script under [patch-schema](./patch-schema) as they introduce newer schema.
+2. Run each script under [patch-schema](./schemas/patch-schema) as they introduce newer schema.
 3. Edit [config.json](./config.json) such that the database password matches your PostgreSQL setup.
 4. Run `go build` or `go run .` to compile Erupe.
 
