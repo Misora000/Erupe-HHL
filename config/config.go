@@ -194,6 +194,7 @@ type GameplayOptions struct {
 	EnableNierEvent                bool    // Enables the Nier event in the Rasta Bar
 	DisableRoad                    bool    // Disables the Hunting Road
 	SeasonOverride                 bool    // Overrides the Quest Season with the current Mezeporta Season
+	MaxCharaGR                     bool    // Create new character with HR7 & GR999
 }
 
 // Discord holds the discord integration config.

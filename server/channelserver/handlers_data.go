@@ -59,8 +59,14 @@ func handleMsgMhfSavedata(s *Session, p mhfpacket.MHFPacket) {
 	s.playtimeTime = time.Now()
 
 	// Bypass name-checker if new
-	if characterSaveData.IsNewCharacter == true {
+	if characterSaveData.IsNewCharacter {
 		s.Name = characterSaveData.Name
+	}
+
+	// Unlock all quest immediately
+	if _config.ErupeConfig.GameplayOptions.MaxCharaGR {
+		characterSaveData.setHR(999)       // HR999
+		characterSaveData.setGRp(13716950) // GR999
 	}
 
 	if characterSaveData.Name == s.Name || _config.ErupeConfig.RealClientMode <= _config.S10 {

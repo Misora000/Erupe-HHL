@@ -255,6 +255,20 @@ func (save *CharacterSaveData) updateStructWithSaveData() {
 	return
 }
 
+func (save *CharacterSaveData) setHR(hr uint16) {
+	hrBytes := make([]byte, 2)
+	binary.LittleEndian.PutUint16(hrBytes, hr)
+	copy(save.decompSave[save.Pointers[pHR]:save.Pointers[pHR]+2], hrBytes)
+	save.HR = hr
+}
+
+func (save *CharacterSaveData) setGRp(grp uint32) {
+	grpBytes := make([]byte, 4)
+	binary.LittleEndian.PutUint32(grpBytes, grp)
+	copy(save.decompSave[save.Pointers[pGRP]:save.Pointers[pGRP]+4], grpBytes)
+	save.GR = grpToGR(int(grp))
+}
+
 func handleMsgMhfSexChanger(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgMhfSexChanger)
 	doAckSimpleSucceed(s, pkt.AckHandle, make([]byte, 4))

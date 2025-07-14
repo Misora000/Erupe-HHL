@@ -10,7 +10,7 @@
   "PatchServerManifest": "",
   "PatchServerFile": "",
   "Screenshots":{
-    "Enabled":true,
+    "Enabled":false,
     "Host":"127.0.0.1",
     "Port":8080,
     "OutputDir":"screenshots",
@@ -33,7 +33,7 @@
   },
   "DebugOptions": {
     "CleanDB": false,
-    "MaxLauncherHR": false,
+    "MaxLauncherHR": true,
     "LogInboundMessages": false,
     "LogOutboundMessages": false,
     "LogMessageData": false,
@@ -73,23 +73,23 @@
     "ExtremeRavienteMaxPlayers": 32,
     "SmallBerserkRavienteMaxPlayers": 8,
     "GUrgentRate": 0.10,
-    "GCPMultiplier": 1.00,
-    "HRPMultiplier": 1.00,
-    "HRPMultiplierNC": 1.00,
-    "SRPMultiplier": 1.00,
-    "SRPMultiplierNC": 1.00,
-    "GRPMultiplier": 1.00,
-    "GRPMultiplierNC": 1.00,
-    "GSRPMultiplier": 1.00,
-    "GSRPMultiplierNC": 1.00,
-    "ZennyMultiplier": 1.00,
-    "ZennyMultiplierNC": 1.00,
-    "GZennyMultiplier": 1.00,
-    "GZennyMultiplierNC": 1.00,
-    "MaterialMultiplier": 1.00,
-    "MaterialMultiplierNC": 1.00,
-    "GMaterialMultiplier": 1.00,
-    "GMaterialMultiplierNC": 1.00,
+    "GCPMultiplier": 100.00,
+    "HRPMultiplier": 100.00,
+    "HRPMultiplierNC": 100.00,
+    "SRPMultiplier": 100.00,
+    "SRPMultiplierNC": 100.00,
+    "GRPMultiplier": 100.00,
+    "GRPMultiplierNC": 100.00,
+    "GSRPMultiplier": 100.00,
+    "GSRPMultiplierNC": 100.00,
+    "ZennyMultiplier": 100.00,
+    "ZennyMultiplierNC": 100.00,
+    "GZennyMultiplier": 100.00,
+    "GZennyMultiplierNC": 100.00,
+    "MaterialMultiplier": 100.00,
+    "MaterialMultiplierNC": 100.00,
+    "GMaterialMultiplier": 100.00,
+    "GMaterialMultiplierNC": 100.00,
     "ExtraCarves": 0,
     "ExtraCarvesNC": 0,
     "GExtraCarves": 0,
@@ -99,11 +99,12 @@
     "MezFesGroupTickets": 1,
     "MezFesDuration": 172800,
     "MezFesSwitchMinigame": false,
-    "EnableKaijiEvent": false,
-    "EnableHiganjimaEvent": false,
-    "EnableNierEvent": false,
+    "EnableKaijiEvent": true,
+    "EnableHiganjimaEvent": true,
+    "EnableNierEvent": true,
     "DisableRoad": false,
-    "SeasonOverride": false
+    "SeasonOverride": false,
+    "MaxCharaGR": true
   },
   "Discord": {
     "Enabled": false,
@@ -122,7 +123,7 @@
       "Prefix": "help"
     }, {
       "Name": "Rights",
-      "Enabled": false,
+      "Enabled": true,
       "Description": "Overwrite the Rights value on your account",
       "Prefix": "rights"
     }, {
@@ -142,7 +143,7 @@
       "Prefix": "reload"
     }, {
       "Name": "KeyQuest",
-      "Enabled": false,
+      "Enabled": true,
       "Description": "Overwrite your HR Key Quest progress",
       "Prefix": "kqf"
     }, {
@@ -152,12 +153,12 @@
       "Prefix": "course"
     }, {
       "Name": "PSN",
-      "Enabled": true,
+      "Enabled": false,
       "Description": "Link a PlayStation Network ID to your account",
       "Prefix": "psn"
     }, {
       "Name": "Discord",
-      "Enabled": true,
+      "Enabled": false,
       "Description": "Generate a token to link your Discord account",
       "Prefix": "discord"
     }, {
@@ -181,20 +182,20 @@
     {"Name": "HunterLife", "Enabled": true},
     {"Name": "Extra", "Enabled": true},
     {"Name": "Premium", "Enabled": true},
-    {"Name": "Assist", "Enabled": false},
-    {"Name": "N", "Enabled": false},
-    {"Name": "Hiden", "Enabled": false},
-    {"Name": "HunterSupport", "Enabled": false},
-    {"Name": "NBoost", "Enabled": false},
+    {"Name": "Assist", "Enabled": true},
+    {"Name": "N", "Enabled": true},
+    {"Name": "Hiden", "Enabled": true},
+    {"Name": "HunterSupport", "Enabled": true},
+    {"Name": "NBoost", "Enabled": true},
     {"Name": "NetCafe", "Enabled": true},
     {"Name": "HLRenewing", "Enabled": true},
     {"Name": "EXRenewing", "Enabled": true}
   ],
   "Database": {
     "Host": "localhost",
-    "Port": 5432,
+    "Port": 5431,
     "User": "postgres",
-    "Password": "",
+    "Password": "1234",
     "Database": "erupe"
   },
   "Sign": {
@@ -202,7 +203,7 @@
     "Port": 53312
   },
   "API": {
-    "Enabled": true,
+    "Enabled": false,
     "Port": 8080,
     "PatchServer": "",
     "Banners": [],
