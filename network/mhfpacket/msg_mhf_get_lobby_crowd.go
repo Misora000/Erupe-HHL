@@ -1,15 +1,15 @@
 package mhfpacket
 
-import ( 
- "errors" 
+import (
+	"errors"
 
- 	"erupe-ce/network/clientctx"
-	"erupe-ce/network"
-	"erupe-ce/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfGetLobbyCrowd represents the MSG_MHF_GET_LOBBY_CROWD
-type MsgMhfGetLobbyCrowd struct{
+type MsgMhfGetLobbyCrowd struct {
 	AckHandle uint32
 	Server    uint32
 	Room      uint32

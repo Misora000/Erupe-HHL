@@ -1,8 +1,9 @@
 package discordbot
 
 import (
-	_config "erupe-ce/config"
 	"regexp"
+
+	_config "github.com/Misora000/Erupe-HHL/config"
 
 	"github.com/bwmarrin/discordgo"
 	"go.uber.org/zap"

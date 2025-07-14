@@ -3,9 +3,9 @@ package mhfpacket
 import (
 	"errors"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfPostGemInfo represents the MSG_MHF_POST_GEM_INFO

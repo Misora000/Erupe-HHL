@@ -3,10 +3,9 @@ package mhfpacket
 import (
 	"errors"
 
-	"erupe-ce/network/clientctx"
-
-	"erupe-ce/network"
-	"erupe-ce/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfAcceptReadReward represents the MSG_MHF_ACCEPT_READ_REWARD

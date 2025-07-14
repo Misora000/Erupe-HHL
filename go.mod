@@ -1,4 +1,4 @@
-module erupe-ce
+module github.com/Misora000/Erupe-HHL
 
 go 1.21
 

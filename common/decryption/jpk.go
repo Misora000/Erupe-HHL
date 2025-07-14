@@ -6,8 +6,9 @@ package decryption
 */
 
 import (
-	"erupe-ce/common/byteframe"
 	"io"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
 )
 
 var mShiftIndex = 0

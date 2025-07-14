@@ -1,11 +1,11 @@
 package mhfpacket
 
-import ( 
- "errors" 
+import (
+	"errors"
 
- 	"erupe-ce/network/clientctx"
-	"erupe-ce/network"
-	"erupe-ce/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfSavePlateBox represents the MSG_MHF_SAVE_PLATE_BOX

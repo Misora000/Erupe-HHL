@@ -3,12 +3,13 @@ package channelserver
 import (
 	"encoding/binary"
 	"errors"
-	"erupe-ce/common/bfutil"
-	"erupe-ce/common/stringsupport"
-	_config "erupe-ce/config"
 
-	"erupe-ce/network/mhfpacket"
-	"erupe-ce/server/channelserver/compression/nullcomp"
+	"github.com/Misora000/Erupe-HHL/common/bfutil"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/server/channelserver/compression/nullcomp"
+
 	"go.uber.org/zap"
 )
 

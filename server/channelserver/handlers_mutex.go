@@ -1,6 +1,6 @@
 package channelserver
 
-import "erupe-ce/network/mhfpacket"
+import "github.com/Misora000/Erupe-HHL/network/mhfpacket"
 
 func handleMsgSysCreateMutex(s *Session, p mhfpacket.MHFPacket) {}
 

@@ -2,9 +2,10 @@ package mhfpacket
 
 import (
 	"errors"
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgSysEnumerateStage represents the MSG_SYS_ENUMERATE_STAGE

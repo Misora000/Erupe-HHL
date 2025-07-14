@@ -2,11 +2,12 @@ package mhfpacket
 
 import (
 	"errors"
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/mhfcourse"
-	ps "erupe-ce/common/pascalstring"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/mhfcourse"
+	ps "github.com/Misora000/Erupe-HHL/common/pascalstring"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgSysUpdateRight represents the MSG_SYS_UPDATE_RIGHT

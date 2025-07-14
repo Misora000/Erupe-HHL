@@ -3,10 +3,10 @@ package mhfpacket
 import (
 	"errors"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/stringsupport"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfCreateJoint represents the MSG_MHF_CREATE_JOINT

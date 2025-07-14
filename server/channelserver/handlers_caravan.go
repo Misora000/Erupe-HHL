@@ -1,10 +1,11 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/stringsupport"
-	"erupe-ce/network/mhfpacket"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 type RyoudamaReward struct {

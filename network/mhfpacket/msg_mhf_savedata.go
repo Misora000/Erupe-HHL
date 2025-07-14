@@ -2,11 +2,12 @@ package mhfpacket
 
 import (
 	"errors"
-	_config "erupe-ce/config"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+	_config "github.com/Misora000/Erupe-HHL/config"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfSavedata represents the MSG_MHF_SAVEDATA

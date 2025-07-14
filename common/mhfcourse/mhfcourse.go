@@ -1,10 +1,11 @@
 package mhfcourse
 
 import (
-	_config "erupe-ce/config"
 	"math"
 	"sort"
 	"time"
+
+	_config "github.com/Misora000/Erupe-HHL/config"
 )
 
 type Course struct {

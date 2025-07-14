@@ -2,12 +2,13 @@ package api
 
 import (
 	"context"
-	_config "erupe-ce/config"
 	"fmt"
 	"net/http"
 	"os"
 	"sync"
 	"time"
+
+	_config "github.com/Misora000/Erupe-HHL/config"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"

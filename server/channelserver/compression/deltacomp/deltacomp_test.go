@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"erupe-ce/server/channelserver/compression/nullcomp"
+	"github.com/Misora000/Erupe-HHL/server/channelserver/compression/nullcomp"
 )
 
 var tests = []struct {

@@ -1,19 +1,20 @@
 package channelserver
 
 import (
-	"erupe-ce/common/mhfmon"
-	"erupe-ce/common/stringsupport"
-	_config "erupe-ce/config"
 	"fmt"
 	"io"
 	"os"
 	"path/filepath"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network/mhfpacket"
-	"erupe-ce/server/channelserver/compression/deltacomp"
-	"erupe-ce/server/channelserver/compression/nullcomp"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/mhfmon"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/server/channelserver/compression/deltacomp"
+	"github.com/Misora000/Erupe-HHL/server/channelserver/compression/nullcomp"
+
 	"go.uber.org/zap"
 )
 

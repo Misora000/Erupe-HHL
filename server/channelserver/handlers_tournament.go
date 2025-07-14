@@ -1,10 +1,11 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	ps "erupe-ce/common/pascalstring"
-	"erupe-ce/network/mhfpacket"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	ps "github.com/Misora000/Erupe-HHL/common/pascalstring"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 type TournamentInfo0 struct {

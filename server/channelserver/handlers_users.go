@@ -3,7 +3,7 @@ package channelserver
 import (
 	"fmt"
 
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 func handleMsgSysInsertUser(s *Session, p mhfpacket.MHFPacket) {}

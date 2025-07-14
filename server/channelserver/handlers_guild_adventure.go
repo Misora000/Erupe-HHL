@@ -3,9 +3,10 @@ package channelserver
 import (
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/stringsupport"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
 	"go.uber.org/zap"
 )
 

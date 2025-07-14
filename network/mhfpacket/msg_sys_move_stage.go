@@ -1,10 +1,10 @@
 package mhfpacket
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/bfutil"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+	"github.com/Misora000/Erupe-HHL/common/bfutil"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgSysMoveStage represents the MSG_SYS_MOVE_STAGE

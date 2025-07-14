@@ -3,16 +3,17 @@ package channelserver
 import (
 	"database/sql"
 	"encoding/binary"
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/decryption"
-	ps "erupe-ce/common/pascalstring"
-	_config "erupe-ce/config"
-	"erupe-ce/network/mhfpacket"
 	"fmt"
 	"io"
 	"os"
 	"path/filepath"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/decryption"
+	ps "github.com/Misora000/Erupe-HHL/common/pascalstring"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 
 	"go.uber.org/zap"
 )

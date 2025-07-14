@@ -1,10 +1,10 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/stringsupport"
-	"erupe-ce/common/token"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/common/token"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 // Handler BBS handles all the interactions with the for the screenshot sending to bulitin board functionality. For it to work it requires the API to be hosted somehwere. This implementation supports discord.

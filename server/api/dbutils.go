@@ -3,9 +3,10 @@ package api
 import (
 	"context"
 	"database/sql"
-	"erupe-ce/common/token"
 	"fmt"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/token"
 
 	"golang.org/x/crypto/bcrypt"
 )

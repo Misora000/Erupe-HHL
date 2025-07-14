@@ -2,12 +2,12 @@ package channelserver
 
 import (
 	"encoding/hex"
-	"erupe-ce/common/stringsupport"
-	_config "erupe-ce/config"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 func cleanupDiva(s *Session) {

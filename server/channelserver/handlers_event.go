@@ -1,13 +1,13 @@
 package channelserver
 
 import (
-	"erupe-ce/common/token"
-	_config "erupe-ce/config"
 	"math"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/token"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 type Event struct {

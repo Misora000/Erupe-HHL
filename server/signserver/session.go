@@ -3,14 +3,14 @@ package signserver
 import (
 	"database/sql"
 	"encoding/hex"
-	"erupe-ce/common/stringsupport"
 	"fmt"
 	"net"
 	"strings"
 	"sync"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/network"
 
 	"go.uber.org/zap"
 )

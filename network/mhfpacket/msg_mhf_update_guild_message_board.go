@@ -2,11 +2,12 @@ package mhfpacket
 
 import (
 	"errors"
-	"erupe-ce/common/stringsupport"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfUpdateGuildMessageBoard represents the MSG_MHF_UPDATE_GUILD_MESSAGE_BOARD

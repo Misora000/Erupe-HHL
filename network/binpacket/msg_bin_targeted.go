@@ -1,8 +1,8 @@
 package binpacket
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
 )
 
 // MsgBinTargeted is a format used for some broadcast types

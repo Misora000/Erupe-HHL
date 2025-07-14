@@ -1,15 +1,16 @@
 package channelserver
 
 import (
-	_config "erupe-ce/config"
 	"fmt"
-	"go.uber.org/zap"
 	"strings"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/stringsupport"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
+	"go.uber.org/zap"
 )
 
 type TowerInfoTRP struct {

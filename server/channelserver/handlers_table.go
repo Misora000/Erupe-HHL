@@ -1,8 +1,8 @@
 package channelserver
 
 import (
-	"erupe-ce/network"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 type handlerFunc func(s *Session, p mhfpacket.MHFPacket)

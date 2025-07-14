@@ -1,17 +1,19 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/mhfitem"
-	ps "erupe-ce/common/pascalstring"
-	"erupe-ce/common/stringsupport"
-	"erupe-ce/common/token"
-	_config "erupe-ce/config"
-	"erupe-ce/network/mhfpacket"
 	"fmt"
-	"go.uber.org/zap"
 	"io"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/mhfitem"
+	ps "github.com/Misora000/Erupe-HHL/common/pascalstring"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/common/token"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
+	"go.uber.org/zap"
 )
 
 const warehouseNamesQuery = `

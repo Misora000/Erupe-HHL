@@ -1,6 +1,6 @@
 package mhfpacket
 
-import "erupe-ce/network"
+import "github.com/Misora000/Erupe-HHL/network"
 
 // FromOpcode gets a packet struct that fulfills the MHFPacket interface by it's opcode.
 func FromOpcode(opcode network.PacketID) MHFPacket {

@@ -1,10 +1,11 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network/mhfpacket"
 	"fmt"
 	"io"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 )
 
 var achievementCurves = [][]int32{

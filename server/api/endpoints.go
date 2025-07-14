@@ -5,8 +5,6 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"errors"
-	_config "erupe-ce/config"
-	"erupe-ce/server/channelserver"
 	"fmt"
 	"image"
 	"image/jpeg"
@@ -17,6 +15,9 @@ import (
 	"regexp"
 	"strings"
 	"time"
+
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/server/channelserver"
 
 	"github.com/gorilla/mux"
 	"github.com/lib/pq"

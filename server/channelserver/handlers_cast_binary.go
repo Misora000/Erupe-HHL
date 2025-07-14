@@ -3,22 +3,23 @@ package channelserver
 import (
 	"crypto/rand"
 	"encoding/hex"
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/mhfcid"
-	"erupe-ce/common/mhfcourse"
-	"erupe-ce/common/token"
-	"erupe-ce/config"
-	"erupe-ce/network"
-	"erupe-ce/network/binpacket"
-	"erupe-ce/network/mhfpacket"
 	"fmt"
-	"golang.org/x/exp/slices"
 	"math"
 	"strconv"
 	"strings"
 	"time"
 
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/mhfcid"
+	"github.com/Misora000/Erupe-HHL/common/mhfcourse"
+	"github.com/Misora000/Erupe-HHL/common/token"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/binpacket"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
 	"go.uber.org/zap"
+	"golang.org/x/exp/slices"
 )
 
 // MSG_SYS_CAST[ED]_BINARY types enum

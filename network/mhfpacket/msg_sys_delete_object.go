@@ -1,9 +1,9 @@
 package mhfpacket
 
 import (
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
-	"erupe-ce/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgSysDeleteObject represents the MSG_SYS_DELETE_OBJECT

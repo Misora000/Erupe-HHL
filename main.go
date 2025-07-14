@@ -1,7 +1,6 @@
 package main
 
 import (
-	_config "erupe-ce/config"
 	"fmt"
 	"net"
 	"os"
@@ -10,11 +9,12 @@ import (
 	"syscall"
 	"time"
 
-	"erupe-ce/server/api"
-	"erupe-ce/server/channelserver"
-	"erupe-ce/server/discordbot"
-	"erupe-ce/server/entranceserver"
-	"erupe-ce/server/signserver"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/server/api"
+	"github.com/Misora000/Erupe-HHL/server/channelserver"
+	"github.com/Misora000/Erupe-HHL/server/discordbot"
+	"github.com/Misora000/Erupe-HHL/server/entranceserver"
+	"github.com/Misora000/Erupe-HHL/server/signserver"
 
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"

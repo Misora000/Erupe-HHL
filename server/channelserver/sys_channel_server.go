@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	ps "erupe-ce/common/pascalstring"
-	_config "erupe-ce/config"
-	"erupe-ce/network/binpacket"
-	"erupe-ce/network/mhfpacket"
-	"erupe-ce/server/discordbot"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	ps "github.com/Misora000/Erupe-HHL/common/pascalstring"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/binpacket"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/server/discordbot"
 
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"

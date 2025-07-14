@@ -2,12 +2,13 @@ package channelserver
 
 import (
 	"database/sql"
-	"erupe-ce/common/stringsupport"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/network/binpacket"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	"github.com/Misora000/Erupe-HHL/network/binpacket"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
 	"go.uber.org/zap"
 )
 

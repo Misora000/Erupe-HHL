@@ -3,16 +3,16 @@ package mhfpacket
 import (
 	"errors"
 
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
-	"erupe-ce/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfAcquireDistItem represents the MSG_MHF_ACQUIRE_DIST_ITEM
 type MsgMhfAcquireDistItem struct {
-	AckHandle uint32
+	AckHandle        uint32
 	DistributionType uint8
-	DistributionID uint32
+	DistributionID   uint32
 }
 
 // Opcode returns the ID associated with this packet type.

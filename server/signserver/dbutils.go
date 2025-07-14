@@ -3,10 +3,11 @@ package signserver
 import (
 	"database/sql"
 	"errors"
-	"erupe-ce/common/mhfcourse"
-	"erupe-ce/common/token"
 	"strings"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/mhfcourse"
+	"github.com/Misora000/Erupe-HHL/common/token"
 
 	"go.uber.org/zap"
 	"golang.org/x/crypto/bcrypt"

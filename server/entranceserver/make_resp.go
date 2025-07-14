@@ -3,13 +3,13 @@ package entranceserver
 import (
 	"encoding/binary"
 	"encoding/hex"
-	"erupe-ce/common/stringsupport"
-	_config "erupe-ce/config"
 	"fmt"
 	"net"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/server/channelserver"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/stringsupport"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/server/channelserver"
 )
 
 func encodeServerInfo(config *_config.Config, s *Server, local bool) []byte {

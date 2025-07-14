@@ -1,15 +1,17 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/mhfcourse"
-	ps "erupe-ce/common/pascalstring"
-	_config "erupe-ce/config"
-	"erupe-ce/network/mhfpacket"
 	"fmt"
-	"go.uber.org/zap"
 	"io"
 	"time"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/mhfcourse"
+	ps "github.com/Misora000/Erupe-HHL/common/pascalstring"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
+	"go.uber.org/zap"
 )
 
 func handleMsgMhfAcquireCafeItem(s *Session, p mhfpacket.MHFPacket) {

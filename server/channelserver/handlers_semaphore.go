@@ -1,12 +1,13 @@
 package channelserver
 
 import (
-	"erupe-ce/common/byteframe"
-	"go.uber.org/zap"
 	"strconv"
 	"strings"
 
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+
+	"go.uber.org/zap"
 )
 
 func removeSessionFromSemaphore(s *Session) {

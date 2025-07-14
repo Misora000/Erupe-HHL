@@ -1,9 +1,10 @@
 package channelserver
 
 import (
-	"erupe-ce/network/mhfpacket"
-	"erupe-ce/server/channelserver/compression/deltacomp"
-	"erupe-ce/server/channelserver/compression/nullcomp"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/server/channelserver/compression/deltacomp"
+	"github.com/Misora000/Erupe-HHL/server/channelserver/compression/nullcomp"
+
 	"go.uber.org/zap"
 )
 

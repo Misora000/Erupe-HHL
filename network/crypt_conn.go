@@ -3,11 +3,12 @@ package network
 import (
 	"encoding/hex"
 	"errors"
-	_config "erupe-ce/config"
-	"erupe-ce/network/crypto"
 	"fmt"
 	"io"
 	"net"
+
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network/crypto"
 )
 
 // CryptConn represents a MHF encrypted two-way connection,

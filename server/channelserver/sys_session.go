@@ -3,19 +3,19 @@ package channelserver
 import (
 	"encoding/binary"
 	"encoding/hex"
-	"erupe-ce/common/mhfcourse"
-	_config "erupe-ce/config"
 	"fmt"
 	"io"
 	"net"
 	"sync"
 	"time"
 
-	"erupe-ce/common/byteframe"
-	"erupe-ce/common/stringstack"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
-	"erupe-ce/network/mhfpacket"
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	"github.com/Misora000/Erupe-HHL/common/mhfcourse"
+	"github.com/Misora000/Erupe-HHL/common/stringstack"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
+	"github.com/Misora000/Erupe-HHL/network/mhfpacket"
 
 	"go.uber.org/zap"
 )

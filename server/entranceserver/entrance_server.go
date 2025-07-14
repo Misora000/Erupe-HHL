@@ -8,8 +8,9 @@ import (
 	"strings"
 	"sync"
 
-	"erupe-ce/config"
-	"erupe-ce/network"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network"
+
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
 )

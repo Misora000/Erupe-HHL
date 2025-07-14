@@ -2,10 +2,11 @@ package mhfpacket
 
 import (
 	"errors"
-	"erupe-ce/common/byteframe"
-	_config "erupe-ce/config"
-	"erupe-ce/network"
-	"erupe-ce/network/clientctx"
+
+	"github.com/Misora000/Erupe-HHL/common/byteframe"
+	_config "github.com/Misora000/Erupe-HHL/config"
+	"github.com/Misora000/Erupe-HHL/network"
+	"github.com/Misora000/Erupe-HHL/network/clientctx"
 )
 
 // MsgMhfApplyDistItem represents the MSG_MHF_APPLY_DIST_ITEM
