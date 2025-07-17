@@ -19,6 +19,16 @@
 | 課金方案 | 透過聊天室窗指令 `!course` 修改 |
 | 等級例如GSR | `config.json` 中已經任務倍率設為100, 再配合方案效果升級很快 |
 
+各種大禮包直接領取
+![Snipaste_2025-07-17_17-35-23-tile](https://github.com/user-attachments/assets/12b9624a-facd-4c3d-b51d-dda4e4881574)
+
+直接向貓馬遜取得道具裝備
+![Snipaste_2025-07-17_17-38-42](https://github.com/user-attachments/assets/9aed8669-bc01-49ea-803b-ddcbf39c971f)
+![Snipaste_2025-07-17_17-38-56-side](https://github.com/user-attachments/assets/49c673f6-ed1c-4165-8d36-5ddf2b6b05f9)
+
+創角立即GR999，透過指令課金方案全開
+![Snipaste_2025-07-17_17-32-58-side](https://github.com/user-attachments/assets/47e4fb54-d03f-4920-91a2-d63e6144097f)
+
 
 ## 聊天室窗指令
 
@@ -74,7 +84,7 @@ var aliases = map[uint16][]string{
 
 ## Resource
 - [All-In-One](https://drive.google.com/drive/folders/1wnB8ohEHFQ-TM_Cgtkzmv_wsa66Q32tJ?usp=sharing)
-- [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.0.1/Erupe-HHL-win-amd64.7z)
+- [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.1.0/Erupe-HHL_v0.1.0-win-amd64.7z))
 - [Client-Side Only](https://drive.google.com/file/d/148wXH_j84afJVGWnIPuQHiSceqlJgCXP/view)
 - [Quests & Scenarios](https://files.catbox.moe/xf0l7w.7z)
 
