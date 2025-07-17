@@ -4,17 +4,19 @@
 
 加入一些輕鬆享受狩獵魔物的方便功能
 - 創立角色時即滿等(HR7 & GR999)
-- `config.json` 中各種方便功能預設開啟
-  
+- 預先建立好近百組禮物，能直接領取多種裝備素材(生產券、GX珠、擊玉、鎧玉、倉庫等等)
+- 貓馬遜道具裝備配送服務，聊天框指令輸入 `!amazon` 直接取得道具裝備
 
+## 安裝方式
+[安裝步驟](https://github.com/Misora000/Erupe-HHL/blob/main/setup.md)
 
 ## 輕鬆狩獵指南
 關於遊戲中各種難搞的東西的取得方式
 |||
 | --- | --- |
 | HR / GR | 創立角色時即滿等999, 創完角色後要立刻結束遊戲**重新登入**一次才能生效 |
-| 貨幣與素材 | 透過 [存檔修改器](https://github.com/Chakratos/mhf-save-manager) 修改 |
-| 課金方案 | 透過聊天室窗指令修改 |
+| 貨幣、素材、裝備 | 找櫃台領取 or 透過聊天框指令 `!amazon` 取得  |
+| 課金方案 | 透過聊天室窗指令 `!course` 修改 |
 | 等級例如GSR | `config.json` 中已經任務倍率設為100, 再配合方案效果升級很快 |
 
 
@@ -40,23 +42,38 @@ var aliases = map[uint16][]string{
 	10: {"Hiden", "Secret"},
 	11: {"HunterSupport", "HunterAid", "Support", "Aid", "Royal"},
 	12: {"NBoost", "NetCafeBoost", "Boost"},
-	// 13-19 show up as (unknown)
-	20: {"DEBUG"},
-	21: {"COG_LINK_EXPIRED"},
-	22: {"360_GOLD"},
-	23: {"PS3_TROP"},
-	24: {"COG"},
-	25: {"CAFE_SP"},
-	26: {"NetCafe", "Cafe", "OfficialCafe", "Official"},
-	27: {"HLRenewing", "HLR", "HLRenewal", "HLRenew", "CardHL"},
-	28: {"EXRenewing", "EXR", "EXRenewal", "EXRenew", "CardEX"},
-	29: {"Free"},
-	// 30 = Real NetCafe course
+	...
 }
 ```
 
+## 貓馬遜道具裝備配送服務
+
+聊天框指令的一種，直接輸入想要的道具裝備與數量，輸入完後向櫃台領取  
+```
+!amazon <type> <id> <amount>
+```
+例如取得3把 `極大蛇ノ太刀【燦然】`
+```
+!amazon 5 8D40 3
+```
+道具的id為 `little-endian` 的16進位表示法，建議從 [存檔修改器的列表](https://github.com/Chakratos/mhf-save-manager/blob/master/app/I18N/ja_JP/Items.php) 中搜尋  
+請勿輸入 [ＭＨＦ猟団FreeDomの小部屋](https://mhwiki.axibug.com/MHF_XiaoWu9.0CN/) 的道具id，小部屋的id是big-endian，輸入下去高機率讓玩家存檔壞掉  
+
+道具的type (只列出最常用的8種，實際遊戲中有31種type)
+| type | EN | 中文 |
+| --- | --- | --- |
+| 0 | leg | 腿防具 |
+| 1 | head | 頭防具 |
+| 2 | chest | 身防具 |
+| 3 | arms | 手防具 |
+| 4 | waist | 腰防具 |
+| 5 | melee | 近戰武器 |
+| 6 | ranged | 遠戰武器　|
+| 7 | item | 道具素材 |
+
+
 ## Resource
-- [All-In-One](https://drive.google.com/file/d/1M6B23mxVlvpc47_cSEsRTRNJW39GNK0i/view)
+- [All-In-One](https://drive.google.com/drive/folders/1wnB8ohEHFQ-TM_Cgtkzmv_wsa66Q32tJ?usp=sharing)
 - [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.0.1/Erupe-HHL-win-amd64.7z)
 - [Client-Side Only](https://drive.google.com/file/d/148wXH_j84afJVGWnIPuQHiSceqlJgCXP/view)
 - [Quests & Scenarios](https://files.catbox.moe/xf0l7w.7z)

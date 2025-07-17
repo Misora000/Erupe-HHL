@@ -1,6 +1,11 @@
 package channelserver
 
 import (
+	"encoding/binary"
+	"encoding/hex"
+	"fmt"
+	"strconv"
+	"sync"
 	"time"
 
 	"github.com/Misora000/Erupe-HHL/common/byteframe"
@@ -26,6 +31,67 @@ type Distribution struct {
 	EventName       string    `db:"event_name"`
 	Description     string    `db:"description"`
 	Selection       bool      `db:"selection"`
+}
+
+// Wishing is a cache-in-memory distribution hack thae allow players acquire items/equips by chat command.
+type WishingDistribtionItems map[uint32]*DistributionItem
+
+var WishingItemLock = sync.Mutex{}
+var WishingItem WishingDistribtionItems = WishingDistribtionItems{}
+var WishingDistribution = Distribution{
+	ID:              0xFFFF,
+	Deadline:        time.Date(2099, 12, 31, 23, 59, 59, 0, time.UTC),
+	TimesAcceptable: 1,
+	TimesAccepted:   0,
+	MinHR:           0,
+	MaxHR:           999,
+	MinSR:           0,
+	MaxSR:           999,
+	MinGR:           0,
+	MaxGR:           999,
+	EventName:       "Nyamazon",
+	Description:     "Use chat command: $amazon {item_type} {item_id} {amount}\nto place order to Nyamazon.\n\nBe aware {item_id} is little-endian hex string like FF01.\n\nYour savedata may be brokend if you enter a big-endian\nhex string or something else.",
+	Selection:       false,
+}
+
+func (w *WishingDistribtionItems) Set(charaId uint32, itemTypeStr string, itmeIDStr string, amountStr string) error {
+
+	itemType, err := strconv.ParseUint(itemTypeStr, 10, 8)
+	if err != nil {
+		return err
+	}
+
+	amount, err := strconv.ParseUint(amountStr, 10, 32)
+	if err != nil {
+		return err
+	}
+
+	data, err := hex.DecodeString(itmeIDStr)
+	if err != nil {
+		return err
+	}
+	itemID := binary.LittleEndian.Uint16(data)
+
+	item, ok := WishingItem[charaId]
+	if !ok {
+		WishingItemLock.Lock()
+		WishingItem[charaId] = &DistributionItem{
+			ID:       1,
+			ItemType: uint8(itemType),
+			ItemID:   uint32(itemID),
+			Quantity: uint32(amount),
+		}
+		WishingItemLock.Unlock()
+	} else {
+		item.ID = 1
+		item.ItemType = uint8(itemType)
+		item.ItemID = uint32(itemID)
+		item.Quantity = uint32(amount)
+	}
+
+	fmt.Println("succccccccc")
+
+	return nil
 }
 
 func handleMsgMhfEnumerateDistItem(s *Session, p mhfpacket.MHFPacket) {
@@ -57,6 +123,9 @@ func handleMsgMhfEnumerateDistItem(s *Session, p mhfpacket.MHFPacket) {
 			itemDists = append(itemDists, itemDist)
 		}
 	}
+
+	// prepend winshing distribution
+	itemDists = append([]Distribution{WishingDistribution}, itemDists...)
 
 	bf.WriteUint16(uint16(len(itemDists)))
 	for _, dist := range itemDists {
@@ -129,6 +198,15 @@ type DistributionItem struct {
 
 func getDistributionItems(s *Session, i uint32) []DistributionItem {
 	var distItems []DistributionItem
+
+	// get items from wishing distribtion
+	if i == WishingDistribution.ID {
+		if item, ok := WishingItem[s.charID]; ok {
+			distItems = append(distItems, *item)
+		}
+		return distItems
+	}
+
 	rows, err := s.server.db.Queryx(`SELECT id, item_type, COALESCE(item_id, 0) AS item_id, COALESCE(quantity, 0) AS quantity FROM distribution_items WHERE distribution_id=$1`, i)
 	if err == nil {
 		var distItem DistributionItem
@@ -192,12 +270,18 @@ func handleMsgMhfAcquireDistItem(s *Session, p mhfpacket.MHFPacket) {
 func handleMsgMhfGetDistDescription(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgMhfGetDistDescription)
 	var desc string
-	err := s.server.db.QueryRow("SELECT description FROM distribution WHERE id = $1", pkt.DistributionID).Scan(&desc)
-	if err != nil {
-		s.logger.Error("Error parsing item distribution description", zap.Error(err))
-		doAckBufSucceed(s, pkt.AckHandle, make([]byte, 4))
-		return
+
+	if pkt.DistributionID == WishingDistribution.ID {
+		desc = WishingDistribution.Description
+	} else {
+		err := s.server.db.QueryRow("SELECT description FROM distribution WHERE id = $1", pkt.DistributionID).Scan(&desc)
+		if err != nil {
+			s.logger.Error("Error parsing item distribution description", zap.Error(err))
+			doAckBufSucceed(s, pkt.AckHandle, make([]byte, 4))
+			return
+		}
 	}
+
 	bf := byteframe.NewByteFrame()
 	ps.Uint16(bf, desc, true)
 	ps.Uint16(bf, "", false)

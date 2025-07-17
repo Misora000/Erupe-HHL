@@ -10,10 +10,10 @@ services:
     environment:
     # (Make sure these match config.json)
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_PASSWORD=1234
       - POSTGRES_DB=erupe
     ports: 
-      - "5432:5432"
+      - "5431:5432"
     volumes:
       - ./db-data/:/var/lib/postgresql/data/
       - ../schemas/:/schemas/
@@ -28,7 +28,7 @@ services:
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: user@pgadmin.com
-      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_DEFAULT_PASSWORD: 1234
     ports:
       - "5050:80"
     depends_on:

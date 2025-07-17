@@ -263,6 +263,11 @@ func (save *CharacterSaveData) setHR(hr uint16) {
 }
 
 func (save *CharacterSaveData) setGRp(grp uint32) {
+
+	if binary.LittleEndian.Uint32(save.decompSave[save.Pointers[pGRP]:save.Pointers[pGRP]+4]) > grp {
+		return
+	}
+
 	grpBytes := make([]byte, 4)
 	binary.LittleEndian.PutUint32(grpBytes, grp)
 	copy(save.decompSave[save.Pointers[pGRP]:save.Pointers[pGRP]+4], grpBytes)

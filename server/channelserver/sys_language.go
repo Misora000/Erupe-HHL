@@ -71,6 +71,10 @@ type i18n struct {
 			noPlayers string
 			version   string
 		}
+		amazon struct {
+			error   string
+			success string
+		}
 	}
 	raviente struct {
 		berserk        string
@@ -149,6 +153,9 @@ func getLangStrings(s *Server) i18n {
 		i.commands.ravi.noPlayers = "誰も大討伐に参加していません"
 		i.commands.ravi.version = "This command is disabled outside of MHFZZ"
 
+		i.commands.amazon.success = "Your items have been shipped"
+		i.commands.amazon.error = "Error in command. Format: %s <item_type> <item_id> <amount>"
+
 		i.raviente.berserk = "<大討伐：猛狂期>が開催されました！"
 		i.raviente.extreme = "<大討伐：猛狂期【極】>が開催されました！"
 		i.raviente.extremeLimited = "<大討伐：猛狂期【極】(制限付)>が開催されました！"
@@ -216,6 +223,9 @@ func getLangStrings(s *Server) i18n {
 		i.commands.ravi.error = "Raviente command not recognised!"
 		i.commands.ravi.noPlayers = "No one has joined the Great Slaying!"
 		i.commands.ravi.version = "This command is disabled outside of MHFZZ"
+
+		i.commands.amazon.success = "Your items have been shipped"
+		i.commands.amazon.error = "Error in command. Format: %s <item_type> <item_id> <amount>"
 
 		i.raviente.berserk = "<Great Slaying: Berserk> is being held!"
 		i.raviente.extreme = "<Great Slaying: Extreme> is being held!"

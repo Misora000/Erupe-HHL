@@ -415,6 +415,18 @@ func parseChatCommand(s *Session, command string) {
 		} else {
 			sendDisabledCommandMessage(s, commands["Playtime"])
 		}
+	case commands["Amazon"].Prefix:
+		if commands["Amazon"].Enabled || s.isOp() {
+			if len(args) > 3 {
+				if err := WishingItem.Set(s.charID, args[1], args[2], args[3]); err == nil {
+					sendServerChatMessage(s, s.server.i18n.commands.amazon.success)
+				} else {
+					sendServerChatMessage(s, fmt.Sprintf(s.server.i18n.commands.amazon.error, commands["Amazon"].Prefix))
+				}
+			}
+		} else {
+			sendDisabledCommandMessage(s, commands["Amazon"])
+		}
 	case commands["Help"].Prefix:
 		if commands["Help"].Enabled || s.isOp() {
 			for _, command := range commands {

@@ -86,10 +86,10 @@
     "ZennyMultiplierNC": 100.00,
     "GZennyMultiplier": 100.00,
     "GZennyMultiplierNC": 100.00,
-    "MaterialMultiplier": 100.00,
-    "MaterialMultiplierNC": 100.00,
-    "GMaterialMultiplier": 100.00,
-    "GMaterialMultiplierNC": 100.00,
+    "MaterialMultiplier": 10.00,
+    "MaterialMultiplierNC": 10.00,
+    "GMaterialMultiplier": 10.00,
+    "GMaterialMultiplierNC": 10.00,
     "ExtraCarves": 0,
     "ExtraCarvesNC": 0,
     "GExtraCarves": 0,
@@ -176,6 +176,11 @@
       "Enabled": true,
       "Description": "Show your playtime",
       "Prefix": "playtime"
+    }, {
+      "Name": "Amazon",
+      "Enabled": true,
+      "Description": "Get items from Nyamazon",
+      "Prefix": "amazon"
     }
   ],
   "Courses": [
