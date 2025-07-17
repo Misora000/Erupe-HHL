@@ -19,7 +19,7 @@
 | 課金方案 | 透過聊天室窗指令 `!course` 修改 |
 | 等級例如GSR | `config.json` 中已經任務倍率設為100, 再配合方案效果升級很快 |
 
-各種大禮包直接領取
+各種大禮包直接領取，內容物速查表：[GX珠禮包](https://github.com/Misora000/Erupe-HHL/blob/main/csv/GX.csv)、[生產券禮包](https://github.com/Misora000/Erupe-HHL/blob/main/csv/voucher.csv)  
 ![Snipaste_2025-07-17_17-35-23-tile](https://github.com/user-attachments/assets/12b9624a-facd-4c3d-b51d-dda4e4881574)
 
 直接向貓馬遜取得道具裝備
