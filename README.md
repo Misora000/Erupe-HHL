@@ -84,7 +84,7 @@ var aliases = map[uint16][]string{
 
 ## Resource
 - [All-In-One](https://drive.google.com/drive/folders/1wnB8ohEHFQ-TM_Cgtkzmv_wsa66Q32tJ?usp=sharing)
-- [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.1.0/Erupe-HHL_v0.1.0-win-amd64.7z))
+- [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.1.0/Erupe-HHL_v0.1.0-win-amd64.7z)
 - [Client-Side Only](https://drive.google.com/file/d/148wXH_j84afJVGWnIPuQHiSceqlJgCXP/view)
 - [Quests & Scenarios](https://files.catbox.moe/xf0l7w.7z)
 
