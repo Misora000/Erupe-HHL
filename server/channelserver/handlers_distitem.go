@@ -3,7 +3,6 @@ package channelserver
 import (
 	"encoding/binary"
 	"encoding/hex"
-	"fmt"
 	"strconv"
 	"sync"
 	"time"
@@ -88,8 +87,6 @@ func (w *WishingDistribtionItems) Set(charaId uint32, itemTypeStr string, itmeID
 		item.ItemID = uint32(itemID)
 		item.Quantity = uint32(amount)
 	}
-
-	fmt.Println("succccccccc")
 
 	return nil
 }
