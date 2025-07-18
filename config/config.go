@@ -195,6 +195,7 @@ type GameplayOptions struct {
 	DisableRoad                    bool    // Disables the Hunting Road
 	SeasonOverride                 bool    // Overrides the Quest Season with the current Mezeporta Season
 	MaxCharaGR                     bool    // Create new character with HR7 & GR999
+	MaxCharaRP                     bool    // Create new character with 50000 RP
 }
 
 // Discord holds the discord integration config.

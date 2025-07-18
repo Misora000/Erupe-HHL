@@ -274,6 +274,13 @@ func (save *CharacterSaveData) setGRp(grp uint32) {
 	save.GR = grpToGR(int(grp))
 }
 
+func (save *CharacterSaveData) setRP(rp uint16) {
+	rpBytes := make([]byte, 2)
+	binary.LittleEndian.PutUint16(rpBytes, rp)
+	copy(save.decompSave[save.Pointers[pRP]:save.Pointers[pRP]+2], rpBytes)
+	save.RP = rp
+}
+
 func handleMsgMhfSexChanger(s *Session, p mhfpacket.MHFPacket) {
 	pkt := p.(*mhfpacket.MsgMhfSexChanger)
 	doAckSimpleSucceed(s, pkt.AckHandle, make([]byte, 4))

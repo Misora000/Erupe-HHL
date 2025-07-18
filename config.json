@@ -104,7 +104,8 @@
     "EnableNierEvent": true,
     "DisableRoad": false,
     "SeasonOverride": false,
-    "MaxCharaGR": true
+    "MaxCharaGR": true,
+    "MaxCharaRP": true
   },
   "Discord": {
     "Enabled": false,
@@ -133,7 +134,7 @@
       "Prefix": "ravi"
     }, {
       "Name": "Teleport",
-      "Enabled": false,
+      "Enabled": true,
       "Description": "Teleport to specified coordinates",
       "Prefix": "tele"
     }, {

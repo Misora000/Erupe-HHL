@@ -68,6 +68,9 @@ func handleMsgMhfSavedata(s *Session, p mhfpacket.MHFPacket) {
 		characterSaveData.setHR(999)       // HR999
 		characterSaveData.setGRp(13716950) // GR999
 	}
+	if _config.ErupeConfig.GameplayOptions.MaxCharaRP {
+		characterSaveData.setRP(50000)
+	}
 
 	if characterSaveData.Name == s.Name || _config.ErupeConfig.RealClientMode <= _config.S10 {
 		characterSaveData.Save(s)
