@@ -4,6 +4,7 @@
 
 加入一些輕鬆享受狩獵魔物的方便功能
 - 創立角色時即滿等(HR7 & GR999)
+- 角色身上直接鎖死5萬RP，立刻就能創立滿等獵團
 - 預先建立好近百組禮物，能直接領取多種裝備素材(生產券、GX珠、擊玉、鎧玉、倉庫等等)
 - 貓馬遜道具裝備配送服務，聊天框指令輸入 `!amazon` 直接取得道具裝備
 
@@ -84,7 +85,7 @@ var aliases = map[uint16][]string{
 
 ## Resource
 - [All-In-One](https://drive.google.com/drive/folders/1wnB8ohEHFQ-TM_Cgtkzmv_wsa66Q32tJ?usp=sharing)
-- [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.1.0/Erupe-HHL_v0.1.0-win-amd64.7z)
+- [Server-Side Only](https://github.com/Misora000/Erupe-HHL/releases/download/v0.1.1/Erupe-HHL_v0.1.1-win-amd64.7z)
 - [Client-Side Only](https://drive.google.com/file/d/148wXH_j84afJVGWnIPuQHiSceqlJgCXP/view)
 - [Quests & Scenarios](https://files.catbox.moe/xf0l7w.7z)
 
